@@ -1,0 +1,3 @@
+MDAnalysis --upgrade python
+fileinput
+shutil

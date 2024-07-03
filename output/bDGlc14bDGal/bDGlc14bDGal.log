@@ -1,0 +1,30 @@
+bDGlc(1->4)bDGal
+bDGlc14bDGal
+mono CBv2.1.45/CBv2.1.45/CarbBuilder2.exe -i "bDGlc(1->4)bDGal" -o bDGlc14bDGal
+Output:  ----------------------------------
+ ========== CarbBuilder v2 ========
+ ----------------------------------
+--- Author:  Michelle Kuttel mkuttel@gmail.com, [CarbBuilder v1 by Yue Mao and Michelle Kuttel]
+--- University of Cape Town, South Africa.
+--- CarbBuilder is distributed under:
+--- The Artistic License 2.0  Copyright (c) 2021 Michelle M. Kuttel
+---  For structures produced, please reference:  CarbBuilder: Software for Building Molecular Models of Complex Oligo- and Polysaccharide Structures. M. M. Kuttel, Jonas Stahle, and Goran Widmalm, J. Comput. Chem., 37(22): 2098-2105 (2016). DOI: 10.1002/jcc.24428.
+ -----------------------------
+==================================================
+... Input string is bDGlc(1->4)bDGal
+... Repeat unit length = 2
+... No residues = 2
+==================================================
+
+... Searching file 'dihedrals.txt' for  'bDGlc 1 4 bDGal'... Dihedral Match: bDGlc 1 4 bDGal,2,44 16,-159 38,39 174
+...Linking residues (#1)  bDGlc(1->4)bDGal (#0)
+...   Trying dihedral angles = 44.001,16.001
+...    successful
+FINAL linkage: #2 bDGlc (1->4) #1 bDGal: 44, 16
+FINAL structurebDGlc14bDGal
+... 	Writing pbd file: bDGlc14bDGal.pdb
+========================
+
+PDB file Built: bDGlc14bDGal.pdb
+
+Error: 
