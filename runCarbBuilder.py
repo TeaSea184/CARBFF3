@@ -23,7 +23,7 @@ def runCB(molecule):
    fst  = digits[0]
    snd = digits[1]
    convert = re.sub(r'(\w+)(\d)(\d)(\w+)', rf'\1({fst}->{snd})\4', molecule_name)
-
+   print(convert)
    #remove linkage numbers
    linkage = [int(i) for i in molecule_name.split() if i.isdigit()]
 
@@ -31,7 +31,7 @@ def runCB(molecule):
    if os.name == 'nt':
       command = f"CBv2.1.45\\CBv2.1.45\\CarbBuilder2.exe -i \"{convert}\" -o {molecule_name} -PSF"
    else:
-      command = f'mono CBv2.1.45/CBv2.1.45/CarbBuilder2.exe -i "{convert}" -o {molecule_name}'
+      command = f'mono CBv2.1.45/CBv2.1.45/CarbBuilder2.exe -i "{convert}" -o {molecule_name} -PSF'
 
    print(command)
 

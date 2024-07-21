@@ -9,9 +9,9 @@
 #SBATCH --mail-type=ALL
 
 
-cd clstay002@hpc.uct.ac.za:/home/clstay002/Simulations/bDGlc14bDGal//bDGlc14bDGal
+#cd output/bDGlc14bDGal/bDGlc14bDGal
 #When running CUDA NAMD always add +idlepoll to the command line. This is needed to poll the GPU for results rather than sleeping while idle.
 #export LD_LIBRARY_PATH=/opt/exp_soft/NAMD_2.13_Linux-x86_64-multicore-CUDA/:$LD_LIBRARY_PATH
-/opt/exp_soft/NAMD_2.13_Linux-x86_64-multicore-CUDA/namd2 run.conf > run1.log
+/opt/exp_soft/NAMD_2.13_Linux-x86_64-multicore-CUDA/namd2 run.conf > runbDGlc14bDGal.log
 
 

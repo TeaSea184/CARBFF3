@@ -35,6 +35,7 @@ def get_indices(pdb_file):
             
             atom_desc = f"resid {residue_number} and name {atom_name}"
             
+            
             if atom_desc in phi_criteria:
                 index = phi_criteria.index(atom_desc)
                 phi_indices[index] = atom_index - 1

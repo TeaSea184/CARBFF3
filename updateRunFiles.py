@@ -49,7 +49,7 @@ def updateRunFiles(molecule_name, phi, psi, email, path, mol_path):
             print(line,end='')
 
     #copy over parameter file 
-    shutil.copy(f"par_all36_carb_altered_ribitol.txt",f"{output}/par_all36_carb_altered_ribitol")
+    shutil.copy(f"par_all36_carb_altered_ribitol.txt",f"{output}/par_all36_carb_altered_ribitol.txt")
     
     shutil.copy("runPMF.sh", f"{output}/runPMF.sh")
 
@@ -59,8 +59,8 @@ def updateRunFiles(molecule_name, phi, psi, email, path, mol_path):
         elif line.startswith("#SBATCH --job-name="):
             print(f"#SBATCH --job-name= \"{molecule_name}_PMF\"")
         elif line.strip().startswith("cd"):
-            print(f"cd {path}/{molecule_name}")
-        elif line.strip().startswith("/opt/exp_soft/NAMD_2.13_Linux-x86_64-multicore-CUDA/namd2run.conf>"):
+            print(f"#cd {mol_path}/{molecule_name}")
+        elif line.startswith("/opt/exp_soft/NAMD_2.13_Linux-x86_64-multicore-CUDA/namd2"):
             print(f"/opt/exp_soft/NAMD_2.13_Linux-x86_64-multicore-CUDA/namd2 run.conf > run{molecule_name}.log")
         else:
             print(line, end='')

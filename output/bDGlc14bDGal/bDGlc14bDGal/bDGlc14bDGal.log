@@ -1,5 +1,6 @@
 bDGlc14bDGal
 bDGlc14bDGal
+bDGlc(1->4)bDGal
 mono CBv2.1.45/CBv2.1.45/CarbBuilder2.exe -i "bDGlc(1->4)bDGal" -o bDGlc14bDGal
 Output:  ----------------------------------
  ========== CarbBuilder v2 ========
