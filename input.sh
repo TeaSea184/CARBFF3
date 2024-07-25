@@ -13,13 +13,14 @@ read EMAIL
 start=1
 iterations=5
 MOLECULE_PATH=$(echo "output/$MOLECULE" | sed 's/[-()>]//g') 
-
 if [[ "$MOLECULE" == *'*'* ]]; then
     for ((i=1; i<=$iterations; i++)); do
         number=$((start + i))  
         mod_input=$(echo "$MOLECULE" | sed "s/\*/$number/g")  
 
         bash script.sh "$mod_input" "$MOLECULE_PATH" "$REMOTE_USER" "$PASSWORD" "$EMAIL"  
+    done
+else    
     linkage_output=$(python3 DisaccharideSeparator.py "$MOLECULE")
     IFS=, read -ra linkages <<< "$(echo "$linkage_output" | sed 's/\[\][\]//g')"
 
@@ -29,4 +30,5 @@ if [[ "$MOLECULE" == *'*'* ]]; then
         bash script.sh "$updated_link" "$MOLECULE_PATH" "$REMOTE_USER" "$PASSWORD" "$EMAIL"  
     done
 fi
+
 

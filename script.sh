@@ -28,15 +28,18 @@ REMOTE_PATH="${REMOTE_USER}@${REMOTE_HOST}:/home/${REMOTE_USER}/Simulations/${MO
 
 python3 updateRunFiles.py "$MOLECULE" "$output" "$EMAIL" "$REMOTE_PATH" "$MOLECULE_PATH"
 
+#create molecule psf file
+namd3 +p4 +stdout output.log "${MOLECULE_PATH}/${MOLECULE}/create${MOLECULE}PSF.tcl"
+mv "/home/vboxuser/Documents/HonsProject/Code/${MOLECULE}.psf" "${MOLECULE_PATH}/${MOLECULE}/${MOLECULE}.psf"
 # Zip the contents
 zip -r "$MOLECULE_PATH/${MOLECULE}/${MOLECULE}.zip" "$MOLECULE_PATH/${MOLECULE}/"
 
-scp -r "${MOLECULE_PATH}/${MOLECULE}/${MOLECULE}.zip" "${REMOTE_USER}@${REMOTE_HOST}:/home/${REMOTE_USER}/Simulations/${MOLECULE}.zip" 
+sshpass -p ${PASSWORD} scp -r "${MOLECULE_PATH}/${MOLECULE}/${MOLECULE}.zip" "${REMOTE_USER}@${REMOTE_HOST}:/home/${REMOTE_USER}/Simulations/${MOLECULE}.zip" 
 # Log onto the remote server
-ssh "${REMOTE_USER}@${REMOTE_HOST}" \
+sshpass -p ${PASSWORD} ssh -o StrictHostKeyChecking=no "${REMOTE_USER}@${REMOTE_HOST}" \
     "cd /home/${REMOTE_USER}/Simulations/ && \
     unzip ${MOLECULE}.zip && \
     cd ${MOLECULE_PATH}/${MOLECULE}"
 
-ssh "${REMOTE_USER}@${REMOTE_HOST}"  cd Simulations/${MOLECULE_PATH}/${MOLECULE} && chmod +r par_all36_carb_altered_ribitol.txt && sbatch runPMF.sh
+sshpass -p ${PASSWORD} ssh "${REMOTE_USER}@${REMOTE_HOST}"  cd Simulations/${MOLECULE_PATH}/${MOLECULE} && chmod +r par_all36_carb_altered_ribitol.txt && sbatch runPMF.sh
 

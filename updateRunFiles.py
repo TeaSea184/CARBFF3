@@ -14,6 +14,19 @@ def updateRunFiles(molecule_name, phi, psi, email, path, mol_path):
     output = f"{mol_path}/{molecule_name}"
     print(output)
     os.makedirs(output, exist_ok=True)
+
+    #update crete_psf file 
+    shutil.copy("create_psf2.tcl", f"{output}/create{molecule_name}PSF.tcl")
+    for line in fileinput.input("create_psf2.tcl"):
+        if line.strip().startswith('segmentCARB'):
+            print(f"segment CARB {{pdb {molecule_name}.pdb}}")
+        elif line.strip().startswith("coordpdb"):
+            print(f"coordpdb {molecule_name}.pdb CARB")
+        elif line.strip().startswith("writepsf"):
+            print(f"writepsf {molecule_name}.psf")
+        else:
+            print(line,end='')
+        
     #create a copy and update run.conf
     shutil.copy("run.conf", f"{output}/run.conf")    
     for line in fileinput.input(f"{output}/run.conf", inplace=True):
