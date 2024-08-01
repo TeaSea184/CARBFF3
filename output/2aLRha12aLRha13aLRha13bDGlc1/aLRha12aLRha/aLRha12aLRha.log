@@ -1,0 +1,80 @@
+aLRha12aLRha
+aLRha12aLRha
+aLRha(1->2)aLRha
+mono CBv2.1.45/CBv2.1.45/CarbBuilder2.exe -i "aLRha(1->2)aLRha" -o aLRha12aLRha -PSF
+Output:  ----------------------------------
+ ========== CarbBuilder v2 ========
+ ----------------------------------
+--- Author:  Michelle Kuttel mkuttel@gmail.com, [CarbBuilder v1 by Yue Mao and Michelle Kuttel]
+--- University of Cape Town, South Africa.
+--- CarbBuilder is distributed under:
+--- The Artistic License 2.0  Copyright (c) 2021 Michelle M. Kuttel
+---  For structures produced, please reference:  CarbBuilder: Software for Building Molecular Models of Complex Oligo- and Polysaccharide Structures. M. M. Kuttel, Jonas Stahle, and Goran Widmalm, J. Comput. Chem., 37(22): 2098-2105 (2016). DOI: 10.1002/jcc.24428.
+ -----------------------------
+==================================================
+... Input string is aLRha(1->2)aLRha
+... Repeat unit length = 2
+... No residues = 2
+==================================================
+
+... Searching file 'dihedrals.txt' for  'aLRha 1 2 aLRha'... Dihedral Match: aLRha 1 2 aLRha,2,46 14,41 -36,36 168
+...Linking residues (#1)  aLRha(1->2)aLRha (#0)
+...   Trying dihedral angles = 46.001,14.001
+...    successful
+FINAL linkage: #2 aLRha (1->2) #1 aLRha: 46, 14
+FINAL structureaLRha12aLRha
+... 	Writing pbd file: aLRha12aLRha.pdb
+... 	Writing pbd file: aLRha12aLRha_prePSFgen.pdb
+... invoking psfgen  with commands: 
+...
+
+topology /home/vboxuser/Documents/HonsProject/Code/CBv2.1.45/CBv2.1.45/structureFile/CHARMM_topology_file.txt
+segment CARB {pdb aLRha12aLRha.pdb}
+patch 12aa CARB:1 CARB:2
+coordpdb aLRha12aLRha.pdb CARB
+regenerate angles dihedrals
+writepdb aLRha12aLRha.pdb
+writepsf aLRha12aLRha.psf
+exit
+...
+
+PSFGEN 2.0 from NAMD 3.0b6 for Linux-x86_64-multicore
+psfgen) reading topology file /home/vboxuser/Documents/HonsProject/Code/CBv2.1.45/CBv2.1.45/structureFile/CHARMM_topology_file.txt
+
+psfgen)  $Id: top_allxx_sugar.inp,v 1.98 2011-07-20 15:03:53 prabhu Exp $
+psfgen) >>>>>>>>>>>> All-hydrogen topologies used in the <<<<<<<<<<<<<<<<
+psfgen) >>>>> development of the CHARMM carbohydrate  force field<<<<<<<<
+psfgen) >>>>>>>>>>>>>>>>>>>>>>>>> June 2009 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+psfgen) >>>>>>>> Direct comments to Alexander D. MacKerell Jr. <<<<<<<<<<
+psfgen) >>>>>>>>>> via the CHARMM web site: www.charmm.org <<<<<<<<<<<<<<
+psfgen) >>>>>>>>>>>>>>> parameter set discussion forum <<<<<<<<<<<<<<<<<<
+psfgen) 
+psfgen) Created by CHARMM version 32 1
+psfgen) building segment CARB
+psfgen) reading residues from pdb file aLRha12aLRha.pdb
+psfgen) extracted 2 residues from pdb file
+Info: generating structure...
+segment complete.
+psfgen) applying patch 12AA to 2 residue(s)
+psfgen) reading coordinates from pdb file aLRha12aLRha.pdb for segment CARB
+psfgen) regenerating all angles
+psfgen) regenerating all dihedrals
+psfgen) Info: writing pdb file aLRha12aLRha.pdb
+psfgen) Info: pdb file complete.
+psfgen) Info: writing psf file aLRha12aLRha.psf
+psfgen) total of 43 atoms
+psfgen) total of 44 bonds
+psfgen) total of 81 angles
+psfgen) total of 126 dihedrals
+psfgen) total of 0 impropers
+psfgen) total of 0 explicit exclusions
+psfgen) Structure requires EXTended PSF format
+psfgen) total of 0 cross-terms
+psfgen) Info: psf file complete.
+
+
+========================
+
+PDB file Built: aLRha12aLRha.pdb
+
+Error: 

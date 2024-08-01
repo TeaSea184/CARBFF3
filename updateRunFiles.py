@@ -7,12 +7,12 @@ import sys
 import ast
 
 def updateRunFiles(molecule_name, phi, psi, email, path, mol_path):
-    print(phi)
-    print(psi)
-    print("Executing updateRunFiles")
+    #print(phi)
+    #print(psi)
+    #print("Executing updateRunFiles")
 #read in all files  
     output = f"{mol_path}/{molecule_name}"
-    print(output)
+    #print(output)
     os.makedirs(output, exist_ok=True)
 
     #update crete_psf file 

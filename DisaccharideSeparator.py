@@ -25,7 +25,7 @@ def sepDisach(mol):
     monosaccharides = mono.split()
    # print(monosaccharides)
     # Define a regular expression pattern to match the disaccharide linkages
-    pattern = r'[a-zA-Z]+\(\d+->\d+\)[a-zA-Z]+'
+    pattern = r'(?=(\b[a-zA-Z]+\(\d+->\d+\)[a-zA-Z]+\b))'
 
     # Find all matches of the pattern in the polysaccharide string
     disaccharide_linkages = re.findall(pattern, molecule)
