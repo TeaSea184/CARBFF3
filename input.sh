@@ -24,12 +24,15 @@ if [[ "$MOLECULE" == *'*'* ]]; then
 else    
     linkage_output=$(python3 DisaccharideSeparator.py "$MOLECULE")
     IFS=, read -ra linkages <<< "$(echo "$linkage_output" | sed "s/^\[\|]$//g" | sed "s/'//g")"
-
+    echo $IFS
     for element in "${linkages[@]}"; do  
         link=$(echo "$element" | sed "s/'//g" | awk -F'[][]' '{print $2}')
         updated_link=$(echo "$element" | sed 's/[-()>]//g')
-        echo $updated_link
-        #bash script.sh "$updated_link" "$MOLECULE_PATH" "$REMOTE_USER" "$PASSWORD" "$EMAIL"  
+        #echo $updated_link
+        trimmed_link=$(echo "$updated_link"|tr -d ' ')
+        final_link="${trimmed_link//,/}"
+        #echo $final_link
+        bash script.sh "${final_link}" "$MOLECULE_PATH" "$REMOTE_USER" "$PASSWORD" "$EMAIL"  
     done
 fi
 #->2)aLRha(1->2)aLRha(1->3)aLRha(1->3)bDGlc(1->

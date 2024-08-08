@@ -2,10 +2,13 @@ import sys
 import re
 
 def get_indices(pdb_file):
-    adjacent_digits = re.findall(r'\d', pdb_file)
+    disacc_file = pdb_file.split('/')[-1]
+    adjacent_digits = re.findall(r'\d', disacc_file)
     digits = [int(num) for num in adjacent_digits]
-    fst  = digits[0]
+   
+    fst  = 1
     snd = digits[1]
+
 
     phi_criteria = [
         f"resid 2 and name H{fst}",
@@ -29,9 +32,14 @@ def get_indices(pdb_file):
 
     for line in data:
         if line.startswith('ATOM'):
-            atom_index = int(line[6:11].strip())
-            atom_name = line[12:16].strip()
-            residue_number = int(line[22:26].strip())
+            arr = line.split()
+            #print(arr)
+            #atom_index = int(line[6:11].strip())
+            atom_index = int(arr[1])
+            #atom_name = line[12:16].strip()
+            atom_name = arr[2]
+            #residue_number = int(line[22:26].strip())
+            residue_number = int(arr[4])
             
             atom_desc = f"resid {residue_number} and name {atom_name}"
             

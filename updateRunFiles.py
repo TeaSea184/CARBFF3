@@ -7,8 +7,8 @@ import sys
 import ast
 
 def updateRunFiles(molecule_name, phi, psi, email, path, mol_path):
-    #print(phi)
-    #print(psi)
+    print(phi)
+    print(psi)
     #print("Executing updateRunFiles")
 #read in all files  
     output = f"{mol_path}/{molecule_name}"
@@ -70,7 +70,7 @@ def updateRunFiles(molecule_name, phi, psi, email, path, mol_path):
         if line.startswith("#SBATCH --mail-user"):
             print(f"#SBATCH --mail-user= {email}")
         elif line.startswith("#SBATCH --job-name="):
-            print(f"#SBATCH --job-name= \"{molecule_name}_PMF\"")
+            print(f"#SBATCH --job-name=\"{molecule_name}_PMF\"")
         elif line.strip().startswith("cd"):
             print(f"#cd {mol_path}/{molecule_name}")
         elif line.startswith("/opt/exp_soft/NAMD_2.13_Linux-x86_64-multicore-CUDA/namd2"):
@@ -82,6 +82,7 @@ if __name__ == "__main__":
     print(sys.argv)
     name = sys.argv[1]
     output = ast.literal_eval(sys.argv[2])
+    print(output)
     email = sys.argv[3]
     print(f"Email: {email}")
     path = sys.argv[4]
@@ -96,3 +97,4 @@ if __name__ == "__main__":
 #psi = atom_numbers[1]
 #name = "bDGlc14bDGal"
 #updateRunFiles(name,phi,psi)
+#'aLRha12aLRha' '[[23, 22, 9, 7], [22, 9, 7, 8]]' 'CLSTAY002@myuct.ac.za' 'clstay002@hpc.uct.ac.za:/home/clstay002/Simulations/aLRha12aLRha/' 'output/2aLRha12aLRha13aLRha13bDGlc1'

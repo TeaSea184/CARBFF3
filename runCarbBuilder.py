@@ -10,6 +10,7 @@ import re
 #molecule = "bDGlc(1->4)bDGal"
 
 def runCB(molecule):
+   print("Running CarbBuilder")
    #molecule = sys.argv[1]
    print(molecule)
    molecule_name = molecule.replace("(",'')
@@ -23,6 +24,7 @@ def runCB(molecule):
    fst  = digits[0]
    snd = digits[1]
    convert = re.sub(r'(\w+)(\d)(\d)(\w+)', rf'\1({fst}->{snd})\4', molecule_name)
+   #convert = convert.strip(',')
    print(convert)
    #remove linkage numbers
    linkage = [int(i) for i in molecule_name.split() if i.isdigit()]

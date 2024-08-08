@@ -1,7 +1,7 @@
 #!/bin/sh
 #SBATCH --account=gpumk --partition=gpumk
 ###for hpc node s  --account=compsci --partition=ada etc etc
-#SBATCH --nodes=1 --ntasks=20 --gres=gpu:2 
+#SBATCH --nodes=1 --ntasks=2 --gres=gpu:2 
 #SBATCH --time=24:00:00
 #SBATCH --mem-per-cpu=2000
 #SBATCH --job-name= "aLRha12aLRha_PMF"
