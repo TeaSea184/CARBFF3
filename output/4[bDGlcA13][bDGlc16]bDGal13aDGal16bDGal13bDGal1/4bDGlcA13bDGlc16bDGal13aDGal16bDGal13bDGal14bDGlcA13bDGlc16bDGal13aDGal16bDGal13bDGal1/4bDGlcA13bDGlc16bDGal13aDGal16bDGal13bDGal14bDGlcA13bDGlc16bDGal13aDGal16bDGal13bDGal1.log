@@ -1,0 +1,20 @@
+Running CarbBuilder
+4bDGlcA13bDGlc16bDGal13aDGal16bDGal13bDGal14bDGlcA13bDGlc16bDGal13aDGal16bDGal13bDGal1
+4bDGlcA13bDGlc16bDGal13aDGal16bDGal13bDGal14bDGlcA13bDGlc16bDGal13aDGal16bDGal13bDGal1
+4bDGlcA13bDGlc16bDGal13aDGal16bDGal13bDGal14bDGlcA13bDGlc16bDGal13aDGal16bDGal(4->1)bDGal1
+mono CBv2.1.45/CBv2.1.45/CarbBuilder2.exe -i "4bDGlcA13bDGlc16bDGal13aDGal16bDGal13bDGal14bDGlcA13bDGlc16bDGal13aDGal16bDGal(4->1)bDGal1" -o 4bDGlcA13bDGlc16bDGal13aDGal16bDGal13bDGal14bDGlcA13bDGlc16bDGal13aDGal16bDGal13bDGal1 -PSF
+Output:  ----------------------------------
+ ========== CarbBuilder v2 ========
+ ----------------------------------
+--- Author:  Michelle Kuttel mkuttel@gmail.com, [CarbBuilder v1 by Yue Mao and Michelle Kuttel]
+--- University of Cape Town, South Africa.
+--- CarbBuilder is distributed under:
+--- The Artistic License 2.0  Copyright (c) 2021 Michelle M. Kuttel
+---  For structures produced, please reference:  CarbBuilder: Software for Building Molecular Models of Complex Oligo- and Polysaccharide Structures. M. M. Kuttel, Jonas Stahle, and Goran Widmalm, J. Comput. Chem., 37(22): 2098-2105 (2016). DOI: 10.1002/jcc.24428.
+ -----------------------------
+==================================================
+... Input string is 4bDGlcA13bDGlc16bDGal13aDGal16bDGal13bDGal14bDGlcA13bDGlc16bDGal13aDGal16bDGal(4->1)bDGal1
+
+!!! Connection error - PDB file not built due to invalid linkage specification. Cannot link to position >1< in residue bDGal1.
+
+Error: 

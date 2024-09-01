@@ -1,0 +1,46 @@
+REMARK Structure built by CarbBuilder: aDGlc(1->4)bDGlcA
+REMARK 8/28/2024 1:35:46 AM
+ATOM      1  C1  BGLC    1       -1.25   -2.15    3.07  1.00  0.00      CARB
+ATOM      2  H1  BGLC    1       -1.29   -2.16    4.16  1.00  0.00      CARB
+ATOM      3  O1  BGLC    1       -0.50   -3.24    2.58  1.00  0.00      CARB
+ATOM      4  HO1 BGLC    1       -0.43   -3.15    1.62  1.00  0.00      CARB
+ATOM      5  C5  BGLC    1       -3.37   -1.04    3.07  1.00  0.00      CARB
+ATOM      6  H5  BGLC    1       -3.33   -0.94    4.15  1.00  0.00      CARB
+ATOM      7  O5  BGLC    1       -2.60   -2.18    2.65  1.00  0.00      CARB
+ATOM      8  C2  BGLC    1       -0.54   -0.90    2.57  1.00  0.00      CARB
+ATOM      9  H2  BGLC    1       -0.49   -0.94    1.48  1.00  0.00      CARB
+ATOM     10  O2  BGLC    1        0.80   -0.84    3.03  1.00  0.00      CARB
+ATOM     11  HO2 BGLC    1        0.75   -1.08    3.97  1.00  0.00      CARB
+ATOM     12  C3  BGLC    1       -1.32    0.34    2.98  1.00  0.00      CARB
+ATOM     13  H3  BGLC    1       -1.33    0.41    4.07  1.00  0.00      CARB
+ATOM     14  O3  BGLC    1       -0.76    1.51    2.40  1.00  0.00      CARB
+ATOM     15  HO3 BGLC    1        0.18    1.49    2.61  1.00  0.00      CARB
+ATOM     16  C4  BGLC    1       -2.75    0.23    2.50  1.00  0.00      CARB
+ATOM     17  H4  BGLC    1       -2.75    0.17    1.40  1.00  0.00      CARB
+ATOM     18  O4  BGLC    1       -3.53    1.33    2.94  1.00  0.00      CARB
+ATOM     20  C6  BGLC    1       -4.79   -1.25    2.61  1.00  0.00      CARB
+ATOM     21  O6  BGLC    1       -5.68   -1.29    3.71  1.00  0.00      CARB
+ATOM     22  O62 BGLC    1       -4.80   -1.33    1.52  1.00  0.00      CARB
+ATOM     23  C1  AGLC    2       -3.61    2.34    1.94  0.00  0.00  C1 
+ATOM     24  C2  AGLC    2       -3.63    3.77    2.47  0.00  0.00  C2 
+ATOM     25  C3  AGLC    2       -4.91    4.08    3.23  0.00  0.00  C3 
+ATOM     26  C4  AGLC    2       -6.12    3.69    2.41  0.00  0.00  C4 
+ATOM     27  C5  AGLC    2       -6.00    2.23    1.96  0.00  0.00  C5 
+ATOM     28  C6  AGLC    2       -7.14    1.73    1.11  0.00  0.00  C6 
+ATOM     29  O2  AGLC    2       -2.51    3.96    3.33  0.00  0.00 OH2 
+ATOM     30  O3  AGLC    2       -4.96    5.49    3.50  0.00  0.00 OH3 
+ATOM     31  O4  AGLC    2       -7.32    3.82    3.17  0.00  0.00 OH4 
+ATOM     32  O5  AGLC    2       -4.80    2.12    1.18  0.00  0.00 O10 
+ATOM     33  O6  AGLC    2       -7.29    2.49   -0.08  0.00  0.00 OH6 
+ATOM     34  HO2 AGLC    2       -1.66    4.46    2.87  0.00  0.00 HH2 
+ATOM     35  HO3 AGLC    2       -4.81    5.54    4.58  0.00  0.00 HH3 
+ATOM     36  HO4 AGLC    2       -7.77    4.79    2.96  0.00  0.00 HH4 
+ATOM     37  HO6 AGLC    2       -7.29    2.14   -1.11  0.00  0.00 HH6 
+ATOM     40  H5  AGLC    2       -5.97    1.61    2.81  0.00  0.00 H5  
+ATOM     41  H61 AGLC    2       -7.38    0.80    0.83  0.00  0.00 H6  
+ATOM     42  H62 AGLC    2       -8.03    1.81    1.66  0.00  0.00 H20 
+ATOM     43  H1  AGLC    2       -2.71    2.19    1.34  0.00  0.00 H1  
+ATOM     44  H3  AGLC    2       -4.91    3.52    4.17  0.00  0.00 H3  
+ATOM     45  H4  AGLC    2       -6.16    4.35    1.55  0.00  0.00 H4  
+ATOM     46  H2  AGLC    2       -3.55    4.44    1.61  0.00  0.00 H2  
+END

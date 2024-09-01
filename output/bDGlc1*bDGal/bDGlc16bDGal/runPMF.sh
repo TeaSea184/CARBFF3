@@ -4,7 +4,7 @@
 #SBATCH --nodes=1 --ntasks=2 --gres=gpu:2 
 #SBATCH --time=24:00:00
 #SBATCH --mem-per-cpu=2000
-#SBATCH --job-name= "bDGlc16bDGal_PMF"
+#SBATCH --job-name="bDGlc16bDGal_PMF"
 #SBATCH --mail-user= CLSTAY002@myuct.ac.za
 #SBATCH --mail-type=ALL
 

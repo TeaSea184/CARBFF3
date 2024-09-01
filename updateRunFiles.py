@@ -79,7 +79,7 @@ def updateRunFiles(molecule_name, phi, psi, email, path, mol_path):
             print(line, end='')
 
 if __name__ == "__main__":
-    print(sys.argv)
+    #print(sys.argv)
     name = sys.argv[1]
     output = ast.literal_eval(sys.argv[2])
     print(output)

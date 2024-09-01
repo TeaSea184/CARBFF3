@@ -18,13 +18,13 @@ if [[ "$MOLECULE" == *'*'* ]]; then
         number=$((start + i))  
         mod_input=$(echo "$MOLECULE" | sed "s/\*/$number/g") 
         updated_mod=$(echo "$mod_input" | sed 's/[-()>]//g')
-        echo $mod_input
+        #echo $mod_input
         bash script.sh "$updated_mod" "$MOLECULE_PATH" "$REMOTE_USER" "$PASSWORD" "$EMAIL"  
     done
 else    
     linkage_output=$(python3 DisaccharideSeparator.py "$MOLECULE")
     IFS=, read -ra linkages <<< "$(echo "$linkage_output" | sed "s/^\[\|]$//g" | sed "s/'//g")"
-    echo $IFS
+    #echo $IFS
     for element in "${linkages[@]}"; do  
         link=$(echo "$element" | sed "s/'//g" | awk -F'[][]' '{print $2}')
         updated_link=$(echo "$element" | sed 's/[-()>]//g')
