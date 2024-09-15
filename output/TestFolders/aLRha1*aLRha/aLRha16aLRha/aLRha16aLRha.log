@@ -1,0 +1,20 @@
+Running CarbBuilder
+aLRha16aLRha
+aLRha16aLRha
+aLRha(1->6)aLRha
+mono CBv2.1.45/CBv2.1.45/CarbBuilder2.exe -i "aLRha(1->6)aLRha" -o aLRha16aLRha -PSF
+Output:  ----------------------------------
+ ========== CarbBuilder v2 ========
+ ----------------------------------
+--- Author:  Michelle Kuttel mkuttel@gmail.com, [CarbBuilder v1 by Yue Mao and Michelle Kuttel]
+--- University of Cape Town, South Africa.
+--- CarbBuilder is distributed under:
+--- The Artistic License 2.0  Copyright (c) 2021 Michelle M. Kuttel
+---  For structures produced, please reference:  CarbBuilder: Software for Building Molecular Models of Complex Oligo- and Polysaccharide Structures. M. M. Kuttel, Jonas Stahle, and Goran Widmalm, J. Comput. Chem., 37(22): 2098-2105 (2016). DOI: 10.1002/jcc.24428.
+ -----------------------------
+==================================================
+... Input string is aLRha(1->6)aLRha
+
+!!! Connection error - PDB file not built due to invalid linkage specification. Cannot link to position 6 in residue... aLRha.
+
+Error: 

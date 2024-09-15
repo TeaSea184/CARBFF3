@@ -30,9 +30,11 @@ def runCB(molecule):
    linkage = [int(i) for i in molecule_name.split() if i.isdigit()]
 
 
-   if os.name == 'nt':
+   if os.name == 'nt': #Windows
       command = f"CBv2.1.45\\CBv2.1.45\\CarbBuilder2.exe -i \"{convert}\" -o {molecule_name} -PSF"
-   else:
+   elif sys.platform == 'darwin':#MACOS
+      command = f"mono _MACOSX\\CBv2.1.45\\CBv2.1.45\\CarbBuilder2.exe -i \"{convert}\" -o {molecule_name} -PSF"
+   else: #Other POSIX systems
       command = f'mono CBv2.1.45/CBv2.1.45/CarbBuilder2.exe -i "{convert}" -o {molecule_name} -PSF'
 
    print(command)

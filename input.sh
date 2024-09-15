@@ -35,5 +35,4 @@ else
         bash script.sh "${final_link}" "$MOLECULE_PATH" "$REMOTE_USER" "$PASSWORD" "$EMAIL"  
     done
 fi
-#->2)aLRha(1->2)aLRha(1->3)aLRha(1->3)bDGlc(1->
 
