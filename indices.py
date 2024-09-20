@@ -9,7 +9,9 @@ def get_indices(pdb_file):
     fst  = 1
     snd = digits[1]
 
-
+    #Given bDGlc(1->3)bDGlc 
+    #phi: H1, C1, OX, CX
+    #psi C1, OX, CX, HX
     phi_criteria = [
         f"resid 2 and name H{fst}",
         f"resid 2 and name C{fst}",
@@ -33,20 +35,17 @@ def get_indices(pdb_file):
     for line in data:
         if line.startswith('ATOM'):
             arr = line.split()
-            #print(arr)
-            #atom_index = int(line[6:11].strip())
             atom_index = int(arr[1])
-            #atom_name = line[12:16].strip()
             atom_name = arr[2]
-            #residue_number = int(line[22:26].strip())
             residue_number = int(arr[4])
             
             atom_desc = f"resid {residue_number} and name {atom_name}"
             
-            
+            #retrieve phi indices using the residue number and atom name
             if atom_desc in phi_criteria:
                 index = phi_criteria.index(atom_desc)
                 phi_indices[index] = atom_index - 1
+            #retrieve psi indices using the residue number and atom name
             if atom_desc in psi_criteria:
                 index = psi_criteria.index(atom_desc)
                 psi_indices[index] = atom_index - 1

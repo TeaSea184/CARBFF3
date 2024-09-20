@@ -29,7 +29,7 @@ def sepDisach(mol):
         x = re.sub(r'\(.*$', '', x)
         monosaccharides.append(x)
 
-    #Disaccharide linkages regex
+    #Disaccharide linkages regular expression
     pattern = r'(?=(\b[a-zA-Z]+\(\d+->\d+\)[a-zA-Z]+\b))'
 
     # Find all matches of the pattern in the polysaccharide string
