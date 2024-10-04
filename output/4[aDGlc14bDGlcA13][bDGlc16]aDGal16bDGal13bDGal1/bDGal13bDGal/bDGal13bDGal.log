@@ -1,0 +1,81 @@
+Running CarbBuilder
+bDGal13bDGal
+bDGal13bDGal
+bDGal(1->3)bDGal
+mono CBv2.1.45/CBv2.1.45/CarbBuilder2.exe -i "bDGal(1->3)bDGal" -o bDGal13bDGal -PSF
+Output:  ----------------------------------
+ ========== CarbBuilder v2 ========
+ ----------------------------------
+--- Author:  Michelle Kuttel mkuttel@gmail.com, [CarbBuilder v1 by Yue Mao and Michelle Kuttel]
+--- University of Cape Town, South Africa.
+--- CarbBuilder is distributed under:
+--- The Artistic License 2.0  Copyright (c) 2021 Michelle M. Kuttel
+---  For structures produced, please reference:  CarbBuilder: Software for Building Molecular Models of Complex Oligo- and Polysaccharide Structures. M. M. Kuttel, Jonas Stahle, and Goran Widmalm, J. Comput. Chem., 37(22): 2098-2105 (2016). DOI: 10.1002/jcc.24428.
+ -----------------------------
+==================================================
+... Input string is bDGal(1->3)bDGal
+... Repeat unit length = 2
+... No residues = 2
+==================================================
+
+... Searching file 'dihedrals.txt' for  'bDGal 1 3 bDGal'... Dihedral Match: bDGal 1 3 bDGal,2,54 19,50 -60,30 150
+...Linking residues (#1)  bDGal(1->3)bDGal (#0)
+...   Trying dihedral angles = 54.001,19.001
+...    successful
+FINAL linkage: #2 bDGal (1->3) #1 bDGal: 54, 19
+FINAL structurebDGal13bDGal
+... 	Writing pbd file: bDGal13bDGal.pdb
+... 	Writing pbd file: bDGal13bDGal_prePSFgen.pdb
+... invoking psfgen  with commands: 
+...
+
+topology /home/vboxuser/Documents/HonsProject/CARBFF3/CBv2.1.45/CBv2.1.45/structureFile/CHARMM_topology_file.txt
+segment CARB {pdb bDGal13bDGal.pdb}
+patch 13bb CARB:1 CARB:2
+coordpdb bDGal13bDGal.pdb CARB
+regenerate angles dihedrals
+writepdb bDGal13bDGal.pdb
+writepsf bDGal13bDGal.psf
+exit
+...
+
+PSFGEN 2.0 from NAMD 3.0b6 for Linux-x86_64-multicore
+psfgen) reading topology file /home/vboxuser/Documents/HonsProject/CARBFF3/CBv2.1.45/CBv2.1.45/structureFile/CHARMM_topology_file.txt
+
+psfgen)  $Id: top_allxx_sugar.inp,v 1.98 2011-07-20 15:03:53 prabhu Exp $
+psfgen) >>>>>>>>>>>> All-hydrogen topologies used in the <<<<<<<<<<<<<<<<
+psfgen) >>>>> development of the CHARMM carbohydrate  force field<<<<<<<<
+psfgen) >>>>>>>>>>>>>>>>>>>>>>>>> June 2009 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+psfgen) >>>>>>>> Direct comments to Alexander D. MacKerell Jr. <<<<<<<<<<
+psfgen) >>>>>>>>>> via the CHARMM web site: www.charmm.org <<<<<<<<<<<<<<
+psfgen) >>>>>>>>>>>>>>> parameter set discussion forum <<<<<<<<<<<<<<<<<<
+psfgen) 
+psfgen) Created by CHARMM version 32 1
+psfgen) building segment CARB
+psfgen) reading residues from pdb file bDGal13bDGal.pdb
+psfgen) extracted 2 residues from pdb file
+Info: generating structure...
+segment complete.
+psfgen) applying patch 13BB to 2 residue(s)
+psfgen) reading coordinates from pdb file bDGal13bDGal.pdb for segment CARB
+psfgen) regenerating all angles
+psfgen) regenerating all dihedrals
+psfgen) Info: writing pdb file bDGal13bDGal.pdb
+psfgen) Info: pdb file complete.
+psfgen) Info: writing psf file bDGal13bDGal.psf
+psfgen) total of 45 atoms
+psfgen) total of 46 bonds
+psfgen) total of 83 angles
+psfgen) total of 132 dihedrals
+psfgen) total of 0 impropers
+psfgen) total of 0 explicit exclusions
+psfgen) Structure requires EXTended PSF format
+psfgen) total of 0 cross-terms
+psfgen) Info: psf file complete.
+
+
+========================
+
+PDB file Built: bDGal13bDGal.pdb
+
+Error: 
